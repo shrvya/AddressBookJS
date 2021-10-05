@@ -2,6 +2,7 @@
 const prompt = require("prompt-sync")();
 const validation = require("./validation");
 let contact;
+//add contact
 let addContact = () => {
   let firstName = prompt("Enter the first name: ");
   let lastName = prompt("Enter the last name: ");
