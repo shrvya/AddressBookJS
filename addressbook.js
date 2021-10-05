@@ -164,11 +164,16 @@ let editContact = (personName) => {
     }
     if (flag) console.log("Name you entered is not present in addressBook");
 }
+let sizeAddressBook = () => {
+    console.log(
+      "Number of contacts in the addressBook is: " + addressBookArray.length
+    );
+  };
   
 
 let flag = true;
 while (flag) {
-  console.log("1.Add Contact\n2.Display AddressBook 3\search and Edit 4\delete");
+  console.log("1.Add Contact\n2.Display AddressBook 3\search and Edit 4\delete 5\count");
   let choice = prompt("Enter your choice: ");
   switch (Number(choice)) {
     case 1:
@@ -182,6 +187,8 @@ while (flag) {
         break;
     case 4: personName = prompt("Enter the name whose contact you need to delete :")
         deleteContact(personName);
+    break;
+    case 5:sizeAddressBook();
     break;
     default:
       flag = false; 
