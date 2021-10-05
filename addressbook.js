@@ -2,6 +2,7 @@
 const prompt = require("prompt-sync")();
 const validation = require("./validation");
 let contact;
+let addressBookArray = [];
 //add contact
 let addContact = () => {
   let firstName = prompt("Enter the first name: ");
@@ -23,7 +24,7 @@ let addContact = () => {
     validation.emailValidation(email);
   } catch (error) {
     console.error(error);
-    addContact();
+  
   }
   contact = {
       firstName: firstName,
@@ -36,6 +37,7 @@ let addContact = () => {
       email: email,
     };
     console.log("Contacts inserted successfully");
-    console.log(contact);
+    addressBookArray.push(contact)
 };
 addContact();
+console.log(addressBookArray);
